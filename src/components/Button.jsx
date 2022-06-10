@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Button = () => {
+const Button = ({ color, bgColor, size, text, borderRadius }) => {
   return (
-    <div>Button</div>
+    <button type="text"
+      style={{ backgroundColor: bgColor, color, borderRadius: borderRadius }}
+      className={`text-${size} p-3 hover:drop-shadow-xl`}
+    >
+      {text}
+    </button>
   )
 }
 
